@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor Beauty Care & Academy | Dahod, Gujarat</title>
+<meta name="description" content="Noor Beauty Care & Academy – Premium beauty salon services and certified beauty courses in Dahod, Gujarat. Bridal Makeup, Facials, Hair Styling, and Professional Beauty Training.">
+<meta name="keywords" content="beauty salon Dahod, beauty academy Gujarat, bridal makeup, beautician course, hair styling, skin care">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blush: #E8B4B8;
+    --blush-light: #F5D9DC;
+    --blush-deep: #D4909A;
+    --gold: #C9A227;
+    --gold-light: #E2C06B;
+    --gold-pale: #F7EED6;
+    --white: #FFFFFF;
+    --cream: #FDF8F5;
+    --charcoal: #2C2C2C;
+    --gray: #6B6B6B;
+    --gray-light: #F0EDED;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--charcoal);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--blush-deep); border-radius: 3px; }
+
+  /* ── Typography ── */
+  h1,h2,h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.15; }
+  .script { font-family: 'Great Vibes', cursive; color: var(--gold); }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 999;
+    padding: 18px 6%;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all .4s ease;
+  }
+  nav.scrolled {
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 30px rgba(200,140,145,.15);
+    padding: 12px 6%;
+  }
+  .nav-logo { display:flex; flex-direction:column; line-height:1; }
+  .nav-logo span:first-child { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:600; color:var(--charcoal); letter-spacing:.04em; }
+  .nav-logo span:last-child { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:500; }
+  .nav-links { display:flex; gap:2.2rem; list-style:none; }
+  .nav-links a { text-decoration:none; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; color:var(--charcoal); font-weight:500; transition:color .3s; position:relative; }
+  .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+  .nav-links a:hover { color:var(--gold); }
+  .nav-links a:hover::after { width:100%; }
+  .nav-cta { background:var(--blush); color:var(--white); border:none; padding:10px 22px; font-family:'Jost',sans-serif; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; cursor:pointer; transition:all .3s; text-decoration:none; }
+  .nav-cta:hover { background:var(--blush-deep); }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger span { width:24px; height:1.5px; background:var(--charcoal); transition:all .3s; display:block; }
+  .mobile-menu { display:none; position:fixed; top:0; left:0; width:100%; height:100vh; background:var(--white); z-index:998; flex-direction:column; align-items:center; justify-content:center; gap:2.5rem; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--charcoal); text-decoration:none; }
+  .mobile-menu a:hover { color:var(--blush-deep); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FDF0F1 0%, #FAF4EC 50%, #F9EEF0 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,180,184,.18) 0%, transparent 70%);
+  }
+  .hero-bg-circle.c1 { width:700px; height:700px; top:-200px; right:-150px; }
+  .hero-bg-circle.c2 { width:400px; height:400px; bottom:-100px; left:-100px; }
+  .hero-content { padding: 120px 6% 80px 8%; z-index: 2; }
+  .hero-eyebrow { font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:1.2rem; display:flex; align-items:center; gap:.8rem; }
+  .hero-eyebrow::before { content:''; width:40px; height:1px; background:var(--gold); }
+  .hero-h1 { font-size: clamp(3rem, 5vw, 5rem); color: var(--charcoal); margin-bottom: 1.2rem; }
+  .hero-h1 em { color:var(--blush-deep); font-style:normal; }
+  .hero-sub { font-size:1.05rem; color:var(--gray); line-height:1.75; max-width:460px; margin-bottom:2.8rem; font-weight:300; }
+  .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+  .btn-primary { background:var(--blush-deep); color:#fff; padding:14px 32px; font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; text-decoration:none; transition:all .3s; border:2px solid var(--blush-deep); font-family:'Jost',sans-serif; }
+  .btn-primary:hover { background:transparent; color:var(--blush-deep); }
+  .btn-outline { background:transparent; color:var(--charcoal); padding:14px 32px; font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; text-decoration:none; transition:all .3s; border:2px solid var(--charcoal); font-family:'Jost',sans-serif; }
+  .btn-outline:hover { background:var(--charcoal); color:#fff; }
+  .hero-stats { display:flex; gap:2.5rem; margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,.08); }
+  .stat-item { }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:var(--charcoal); line-height:1; }
+  .stat-label { font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gray); margin-top:.3rem; }
+
+  .hero-image-wrap {
+    position: relative; height: 100vh; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-frame {
+    position: relative; width: 380px; height: 500px;
+    margin-top: 60px;
+  }
+  .hero-frame-border {
+    position: absolute; top:-18px; right:-18px; width:100%; height:100%;
+    border: 2px solid var(--gold); z-index: 0;
+  }
+  .hero-photo {
+    width: 100%; height: 100%; object-fit: cover;
+    position: relative; z-index: 1;
+    filter: brightness(1.02) contrast(1.01);
+  }
+  .hero-badge {
+    position: absolute; bottom: -20px; left: -28px; z-index: 3;
+    background: var(--white);
+    padding: 16px 22px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.1);
+    display: flex; align-items: center; gap: 12px;
+    min-width: 210px;
+  }
+  .badge-icon { font-size: 1.8rem; }
+  .badge-text div:first-child { font-size:.65rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gray); }
+  .badge-text div:last-child { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--charcoal); }
+  .hero-rosette {
+    position: absolute; top: 20px; right: -20px; z-index: 3;
+    width: 90px; height: 90px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; flex-direction:column; align-items: center; justify-content: center;
+    text-align: center; color: #fff;
+  }
+  .hero-rosette div:first-child { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; line-height:1; }
+  .hero-rosette div:last-child { font-size:.52rem; letter-spacing:.1em; text-transform:uppercase; line-height:1.3; }
+
+  /* ── DIVIDER ── */
+  .divider { text-align:center; padding:16px 0; overflow:hidden; }
+  .divider-inner { display:inline-flex; align-items:center; gap:1.5rem; color:var(--gold); font-size:.85rem; letter-spacing:.3em; }
+  .divider-inner::before,.divider-inner::after { content:''; width:80px; height:1px; background:var(--gold-light); display:block; }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 100px 8%; }
+  .section-label { font-size:.68rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:.8rem; }
+  .section-title { font-size: clamp(2.2rem, 3.5vw, 3.2rem); color:var(--charcoal); margin-bottom:1.2rem; }
+  .section-sub { color:var(--gray); line-height:1.8; max-width:520px; font-weight:300; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--cream); }
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+  .about-image-collage { position:relative; height:580px; }
+  .about-img-main {
+    position:absolute; top:0; left:0; width:75%; height:82%;
+    object-fit:cover;
+    background: linear-gradient(135deg, var(--blush-light), var(--blush));
+  }
+  .about-img-accent {
+    position:absolute; bottom:0; right:0; width:55%; height:52%;
+    object-fit:cover;
+    background: linear-gradient(135deg, var(--gold-pale), var(--gold-light));
+    border:6px solid var(--white);
+  }
+  .about-gold-line { position:absolute; top:50%; left:calc(75% - 2px); width:2px; height:120px; background:var(--gold); transform:translateY(-50%); }
+  .about-content { }
+  .about-content p { color:var(--gray); line-height:1.9; margin-bottom:1.2rem; font-weight:300; }
+  .about-features { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+  .about-feat { display:flex; align-items:flex-start; gap:.8rem; padding:1rem; background:var(--white); }
+  .feat-icon { font-size:1.4rem; margin-top:2px; }
+  .feat-title { font-size:.8rem; letter-spacing:.08em; font-weight:600; color:var(--charcoal); text-transform:uppercase; margin-bottom:.25rem; }
+  .feat-text { font-size:.82rem; color:var(--gray); line-height:1.6; }
+
+  /* Placeholder image boxes */
+  .img-placeholder {
+    display: flex; align-items: center; justify-content: center;
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    color: rgba(255,255,255,.6); font-weight: 500;
+    position: absolute;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+  .services-intro { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; flex-wrap:wrap; gap:1.5rem; }
+  .services-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.5px; background:var(--gray-light); }
+  .service-card {
+    background: var(--white); padding: 2.5rem 2rem; transition:all .4s;
+    position:relative; overflow:hidden; cursor:pointer;
+  }
+  .service-card::before {
+    content:''; position:absolute; bottom:0; left:0; width:100%; height:3px;
+    background:linear-gradient(90deg, var(--blush), var(--gold));
+    transform: scaleX(0); transform-origin: left; transition: transform .4s;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { box-shadow: 0 10px 40px rgba(232,180,184,.2); transform:translateY(-4px); }
+  .service-emoji { font-size:2.2rem; margin-bottom:1rem; display:block; }
+  .service-name { font-family:'Cormorant Garamond',serif; font-size:1.55rem; margin-bottom:.6rem; }
+  .service-desc { font-size:.85rem; color:var(--gray); line-height:1.7; margin-bottom:1.2rem; font-weight:300; }
+  .service-benefits { list-style:none; margin-bottom:1.5rem; }
+  .service-benefits li { font-size:.78rem; color:var(--gray); padding:.2rem 0; display:flex; align-items:center; gap:.5rem; }
+  .service-benefits li::before { content:'✦'; color:var(--gold); font-size:.55rem; }
+  .service-book-btn {
+    font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--blush-deep);
+    text-decoration:none; border-bottom:1px solid var(--blush-deep); padding-bottom:2px;
+    transition:all .3s; display:inline-block;
+  }
+  .service-book-btn:hover { color:var(--gold); border-color:var(--gold); letter-spacing:.22em; }
+
+  /* ── ACADEMY ── */
+  #academy { background: linear-gradient(135deg, #1a1a1a 0%, #2d2020 50%, #1a1a1a 100%); color:#fff; position:relative; overflow:hidden; }
+  #academy::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A227' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  #academy .section-label { color: var(--gold-light); }
+  #academy .section-title { color: var(--white); }
+  #academy .section-sub { color: rgba(255,255,255,.6); max-width:500px; }
+  .academy-intro { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; flex-wrap:wrap; gap:2rem; }
+  .academy-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem; }
+  .course-card {
+    border: 1px solid rgba(201,162,39,.2);
+    padding: 2.2rem;
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .course-card::after {
+    content: ''; position:absolute; top:-50%; left:-50%;
+    width:200%; height:200%;
+    background: radial-gradient(circle, rgba(201,162,39,.05) 0%, transparent 60%);
+    opacity: 0; transition: opacity .4s;
+  }
+  .course-card:hover { border-color:var(--gold); transform:translateY(-4px); box-shadow:0 20px 60px rgba(0,0,0,.3); }
+  .course-card:hover::after { opacity:1; }
+  .course-badge { display:inline-block; padding:4px 12px; background:rgba(201,162,39,.15); color:var(--gold-light); font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; margin-bottom:1.2rem; border:1px solid rgba(201,162,39,.3); }
+  .course-name { font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--white); margin-bottom:.8rem; }
+  .course-desc { font-size:.84rem; color:rgba(255,255,255,.55); line-height:1.8; margin-bottom:1.5rem; font-weight:300; }
+  .course-details { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; margin-bottom:1.8rem; }
+  .course-detail { display:flex; flex-direction:column; }
+  .course-detail-label { font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:.25rem; }
+  .course-detail-val { font-size:.85rem; color:rgba(255,255,255,.85); font-weight:500; }
+  .course-features { list-style:none; margin-bottom:1.8rem; }
+  .course-features li { font-size:.8rem; color:rgba(255,255,255,.55); padding:.3rem 0; display:flex; align-items:center; gap:.6rem; }
+  .course-features li::before { content:'◆'; color:var(--gold); font-size:.45rem; }
+  .enroll-btn {
+    display:inline-block; padding:11px 26px;
+    background:var(--gold); color:var(--charcoal);
+    font-size:.75rem; letter-spacing:.15em; text-transform:uppercase;
+    text-decoration:none; font-weight:600;
+    transition:all .3s; font-family:'Jost',sans-serif;
+    border:2px solid var(--gold);
+  }
+  .enroll-btn:hover { background:transparent; color:var(--gold); }
+
+  /* ── GALLERY ── */
+  #gallery { background:var(--cream); padding:100px 8%; }
+  .gallery-intro { text-align:center; margin-bottom:3.5rem; }
+  .gallery-intro .section-sub { margin:0 auto; }
+  .gallery-grid {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    gap:12px;
+  }
+  .gallery-item {
+    overflow:hidden; cursor:pointer; position:relative;
+  }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-color-1 { background: linear-gradient(135deg, #E8B4B8, #D4909A); }
+  .gallery-color-2 { background: linear-gradient(135deg, #C9A227, #E2C06B); }
+  .gallery-color-3 { background: linear-gradient(135deg, #D4909A, #C07080); }
+  .gallery-color-4 { background: linear-gradient(135deg, #F5D9DC, #E8B4B8); }
+  .gallery-color-5 { background: linear-gradient(135deg, #2C2C2C, #4A3040); }
+  .gallery-color-6 { background: linear-gradient(135deg, #F7EED6, #E2C06B); }
+  .gallery-color-7 { background: linear-gradient(135deg, #C07080, #A04060); }
+  .gallery-overlay {
+    position:absolute; inset:0; background:rgba(0,0,0,.35);
+    display:flex; align-items:flex-end; padding:1.2rem;
+    opacity:0; transition:opacity .4s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity:1; }
+  .gallery-label { color:#fff; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; }
+  .gallery-icon { font-size:2.5rem; display:flex; align-items:center; justify-content:center; height:100%; color:rgba(255,255,255,.5); }
+
+  /* ── WHY US ── */
+  #why { background:var(--white); }
+  .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+  .why-features { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+  .why-feat {
+    padding:2rem 1.5rem; border:1px solid var(--gray-light);
+    transition:all .4s; cursor:default;
+  }
+  .why-feat:hover { border-color:var(--blush); box-shadow:0 8px 30px rgba(232,180,184,.15); }
+  .why-feat-icon { font-size:2rem; margin-bottom:1rem; display:block; }
+  .why-feat-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:.5rem; }
+  .why-feat-text { font-size:.82rem; color:var(--gray); line-height:1.7; font-weight:300; }
+  .why-content .section-sub { margin-bottom:2rem; }
+  .why-promise {
+    display:flex; flex-direction:column; gap:1rem; margin-top:2rem;
+  }
+  .promise-item { display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--cream); }
+  .promise-check { width:28px; height:28px; background:var(--blush); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:.8rem; flex-shrink:0; }
+  .promise-text { font-size:.85rem; color:var(--charcoal); font-weight:500; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: linear-gradient(180deg, #FDF8F5 0%, var(--white) 100%); text-align:center; }
+  .testimonials-title-wrap { margin-bottom:4rem; }
+  .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
+  .testimonial-card {
+    padding:2.5rem 2rem; background:var(--white);
+    box-shadow: 0 4px 30px rgba(0,0,0,.05);
+    border-top: 3px solid var(--blush);
+    text-align:left; transition:all .4s;
+  }
+  .testimonial-card:hover { box-shadow:0 12px 50px rgba(232,180,184,.2); transform:translateY(-4px); }
+  .testimonial-stars { color:var(--gold); letter-spacing:4px; font-size:.9rem; margin-bottom:1.2rem; }
+  .testimonial-text { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--charcoal); line-height:1.7; margin-bottom:1.5rem; font-style:italic; }
+  .testimonial-author { display:flex; align-items:center; gap:.8rem; }
+  .author-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg, var(--blush-light), var(--blush)); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:600; flex-shrink:0; }
+  .author-name { font-weight:600; font-size:.88rem; color:var(--charcoal); }
+  .author-role { font-size:.75rem; color:var(--gray); }
+
+  /* ── CTA BANNER ── */
+  #cta {
+    background: linear-gradient(135deg, var(--blush-deep) 0%, #C07080 50%, var(--blush-deep) 100%);
+    text-align:center; padding:80px 8%;
+    position:relative; overflow:hidden;
+  }
+  #cta::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M20 20c0-5.523-4.477-10-10-10S0 14.477 0 20s4.477 10 10 10 10-4.477 10-10zm10 0c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z'/%3E%3C/g%3E%3C/svg%3E"); }
+  .cta-script { font-family:'Great Vibes',cursive; font-size:3.5rem; color:rgba(255,255,255,.4); margin-bottom:.5rem; display:block; }
+  #cta h2 { font-size:clamp(2.5rem,4vw,4rem); color:#fff; margin-bottom:1rem; }
+  #cta p { color:rgba(255,255,255,.8); font-size:1.05rem; margin-bottom:2.5rem; font-weight:300; }
+  .cta-btns { display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap; }
+  .btn-white { background:#fff; color:var(--blush-deep); padding:14px 34px; font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; text-decoration:none; transition:all .3s; font-weight:600; font-family:'Jost',sans-serif; }
+  .btn-white:hover { background:var(--charcoal); color:#fff; }
+  .btn-whatsapp { background:#25D366; color:#fff; padding:14px 34px; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; transition:all .3s; display:flex; align-items:center; gap:.6rem; font-family:'Jost',sans-serif; }
+  .btn-whatsapp:hover { background:#1EBE5E; }
+
+  /* ── CONTACT ── */
+  #contact { background:var(--cream); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:5rem; }
+  .contact-info h3 { font-size:1.9rem; margin-bottom:1.5rem; }
+  .contact-info p { color:var(--gray); line-height:1.8; font-weight:300; margin-bottom:2rem; }
+  .contact-items { display:flex; flex-direction:column; gap:1.2rem; }
+  .contact-item { display:flex; align-items:center; gap:1rem; }
+  .contact-icon { width:44px; height:44px; background:var(--white); border:1px solid var(--blush-light); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+  .contact-item-label { font-size:.65rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gray); margin-bottom:.15rem; }
+  .contact-item-val { font-size:.9rem; color:var(--charcoal); font-weight:500; text-decoration:none; }
+  .contact-item-val:hover { color:var(--blush-deep); }
+  .social-links { display:flex; gap:1rem; margin-top:2rem; }
+  .social-link { width:42px; height:42px; background:var(--white); border:1px solid var(--gray-light); display:flex; align-items:center; justify-content:center; font-size:1rem; text-decoration:none; transition:all .3s; color:var(--charcoal); }
+  .social-link:hover { background:var(--blush); color:#fff; border-color:var(--blush); }
+
+  /* form */
+  .contact-form { background:var(--white); padding:3rem; }
+  .contact-form h3 { font-size:1.7rem; margin-bottom:.5rem; }
+  .form-subtitle { font-size:.82rem; color:var(--gray); margin-bottom:2rem; font-weight:300; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .form-group { margin-bottom:1.2rem; }
+  .form-group label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gray); display:block; margin-bottom:.5rem; font-weight:500; }
+  .form-group input, .form-group select, .form-group textarea {
+    width:100%; padding:12px 14px;
+    border:1px solid #E0DADA; background:var(--cream);
+    font-family:'Jost',sans-serif; font-size:.9rem; color:var(--charcoal);
+    outline:none; transition:border-color .3s;
+    appearance: none; resize:vertical;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--blush); }
+  .form-submit { width:100%; padding:14px; background:var(--blush-deep); color:#fff; border:none; font-family:'Jost',sans-serif; font-size:.82rem; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .3s; }
+  .form-submit:hover { background:var(--charcoal); }
+  .map-embed { margin-top:2rem; width:100%; height:220px; background:linear-gradient(135deg,var(--blush-light),var(--blush)); display:flex; align-items:center; justify-content:center; color:var(--white); font-size:.85rem; letter-spacing:.1em; border:none; }
+  .map-link { display:flex; align-items:center; justify-content:center; gap:.5rem; text-decoration:none; color:var(--white); font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #1a1a1a; color:rgba(255,255,255,.65);
+    padding: 70px 8% 30px;
+  }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:4rem; margin-bottom:3rem; }
+  .footer-brand .nav-logo span:first-child { color:#fff; }
+  .footer-brand p { font-size:.84rem; line-height:1.8; color:rgba(255,255,255,.5); margin-top:1rem; max-width:280px; font-weight:300; }
+  .footer-social { display:flex; gap:.8rem; margin-top:1.5rem; }
+  .footer-social a { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); display:flex; align-items:center; justify-content:center; text-decoration:none; color:rgba(255,255,255,.6); font-size:.9rem; transition:all .3s; }
+  .footer-social a:hover { background:var(--blush); border-color:var(--blush); color:#fff; }
+  .footer-col h4 { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:#fff; margin-bottom:1.2rem; font-weight:500; }
+  .footer-links { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+  .footer-links a { text-decoration:none; color:rgba(255,255,255,.5); font-size:.83rem; transition:color .3s; }
+  .footer-links a:hover { color:var(--gold-light); }
+  .footer-bottom { border-top:1px solid rgba(255,255,255,.08); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:.75rem; color:rgba(255,255,255,.35); }
+  .footer-bottom a { color:var(--gold-light); text-decoration:none; }
+
+  /* ── Floating WhatsApp ── */
+  .whatsapp-float {
+    position: fixed; bottom: 30px; right: 30px; z-index: 1000;
+    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1.6rem; color: #fff;
+    box-shadow: 0 6px 24px rgba(37,211,102,.4);
+    animation: pulse 2.5s infinite;
+  }
+  @keyframes pulse { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 40px rgba(37,211,102,.7)} }
+
+  /* ── Animations ── */
+  .fade-in { opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+  .fade-in-left { opacity:0; transform:translateX(-40px); transition:opacity .8s ease, transform .8s ease; }
+  .fade-in-left.visible { opacity:1; transform:translateX(0); }
+  .fade-in-right { opacity:0; transform:translateX(40px); transition:opacity .8s ease, transform .8s ease; }
+  .fade-in-right.visible { opacity:1; transform:translateX(0); }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:1024px) {
+    #hero { grid-template-columns:1fr; min-height:auto; }
+    .hero-content { padding:140px 6% 60px; }
+    .hero-image-wrap { height:500px; }
+    .about-grid, .why-grid, .contact-grid { grid-template-columns:1fr; gap:3rem; }
+    .about-image-collage { height:360px; }
+    .testimonials-grid { grid-template-columns:1fr 1fr; }
+    .footer-grid { grid-template-columns:1fr 1fr; gap:2.5rem; }
+  }
+  @media(max-width:768px) {
+    section { padding:70px 5%; }
+    .nav-links { display:none; }
+    .nav-cta { display:none; }
+    .hamburger { display:flex; }
+    .hero-h1 { font-size:2.6rem; }
+    .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+    .gallery-item.tall { grid-row:span 1; }
+    .gallery-item.wide { grid-column:span 2; }
+    .testimonials-grid { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:1fr; gap:2rem; }
+    .form-row { grid-template-columns:1fr; }
+    .about-features { grid-template-columns:1fr; }
+    .why-features { grid-template-columns:1fr; }
+    .academy-grid { grid-template-columns:1fr; }
+    .services-intro { flex-direction:column; align-items:flex-start; }
+    .hero-frame { width:280px; height:380px; margin:0 auto; }
+  }
+  @media(max-width:480px) {
+    .hero-stats { gap:1.5rem; flex-wrap:wrap; }
+    .hero-btns { flex-direction:column; }
+    .btn-primary,.btn-outline { text-align:center; }
+    .cta-btns { flex-direction:column; align-items:center; }
+    .contact-form { padding:2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <span>Noor Beauty</span>
+    <span>Care & Academy · Dahod</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#academy">Academy</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919978651521" class="nav-cta">Book Now</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#academy" onclick="closeMobile()">Academy</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="https://wa.me/919978651521" style="color:var(--blush-deep);font-size:1rem;letter-spacing:.1em;">📲 Book via WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+
+  <div class="hero-content fade-in">
+    <div class="hero-eyebrow">Beauty Care & Academy</div>
+    <h1 class="hero-h1">Enhance Your<br><em>Natural Beauty</em></h1>
+    <p class="hero-sub">Professional beauty services and certified beauty courses in the heart of Dahod, Gujarat. Where artistry meets excellence.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Book Appointment</a>
+      <a href="#academy" class="btn-outline">Join Academy</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Students Trained</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Years of Trust</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image-wrap fade-in-right">
+    <div class="hero-frame">
+      <div class="hero-frame-border"></div>
+      <img src="hero-photo.png" alt="Noor Beauty Professional" class="hero-photo">
+      <div class="hero-badge">
+        <div class="badge-icon">✦</div>
+        <div class="badge-text">
+          <div>Certified by</div>
+          <div>Beauty Council of India</div>
+        </div>
+      </div>
+      <div class="hero-rosette">
+        <div>#1</div>
+        <div>Beauty<br>Salon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider">
+  <div class="divider-inner">✦ Luxury Beauty Treatments ✦ Certified Courses ✦ Bridal Specialists ✦</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-collage fade-in-left">
+      <div class="about-img-main img-placeholder" style="background:linear-gradient(135deg,#E8B4B8,#C07080);">
+        <span style="font-size:.8rem;letter-spacing:.12em;color:rgba(255,255,255,.7);">💄 Salon Interior</span>
+      </div>
+      <div class="about-img-accent img-placeholder" style="background:linear-gradient(135deg,#F7EED6,#C9A227);">
+        <span style="font-size:.8rem;letter-spacing:.12em;color:rgba(255,255,255,.7);">🎓 Academy Training</span>
+      </div>
+      <div class="about-gold-line"></div>
+    </div>
+    <div class="about-content fade-in-right">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Where Beauty<br>Becomes Art</h2>
+      <p>Welcome to <strong>Noor Beauty Care & Academy</strong> — Dahod's most trusted name in beauty services and professional beauty education. Founded with a passion for enhancing every woman's natural radiance, we have served hundreds of clients and trained the next generation of beauty professionals.</p>
+      <p>Our salon is built on the belief that every woman deserves to feel confident and beautiful. Our expert team uses premium international products and modern techniques to deliver flawless results — from everyday grooming to show-stopping bridal transformations.</p>
+      <p>Beyond services, our Academy is a launchpad for aspiring beauty professionals. With hands-on training, certified courses, and mentorship from seasoned experts, we've helped over 200 students build successful careers in the beauty industry.</p>
+      <div class="about-features">
+        <div class="about-feat">
+          <div class="feat-icon">💎</div>
+          <div>
+            <div class="feat-title">Premium Products</div>
+            <div class="feat-text">International-grade cosmetics and skincare for every service</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🎓</div>
+          <div>
+            <div class="feat-title">Certified Training</div>
+            <div class="feat-text">Government-recognised certification upon course completion</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">✨</div>
+          <div>
+            <div class="feat-title">Modern Techniques</div>
+            <div class="feat-text">Latest beauty trends and advanced application methods</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">💝</div>
+          <div>
+            <div class="feat-title">Client First</div>
+            <div class="feat-text">Personalised care and 100% satisfaction guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
+    <div class="fade-in">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Our Beauty Services</h2>
+    </div>
+    <p class="section-sub fade-in">From everyday elegance to bridal grandeur, every treatment is crafted with precision and care.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">👰</span>
+      <div class="service-name">Bridal Makeup</div>
+      <p class="service-desc">A once-in-a-lifetime look crafted just for you. We create timeless bridal transformations that last through every celebration.</p>
+      <ul class="service-benefits">
+        <li>Trial session included</li>
+        <li>Long-wearing formulas</li>
+        <li>HD & airbrush options</li>
+        <li>Pre-bridal skincare prep</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">🌟</span>
+      <div class="service-name">Party Makeup</div>
+      <p class="service-desc">Glamorous, long-lasting makeup for every occasion — sangeet, reception, festivals, and more.</p>
+      <ul class="service-benefits">
+        <li>Custom look design</li>
+        <li>Skin-matching foundation</li>
+        <li>Contouring & highlights</li>
+        <li>Lash application</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">🌸</span>
+      <div class="service-name">Facial Treatments</div>
+      <p class="service-desc">Revive your glow with our signature facials — from deep cleansing to gold-infused luxury treatments.</p>
+      <ul class="service-benefits">
+        <li>Skin type analysis</li>
+        <li>Gold & diamond facials</li>
+        <li>Anti-ageing treatment</li>
+        <li>Instant radiance boost</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">💇‍♀️</span>
+      <div class="service-name">Hair Styling</div>
+      <p class="service-desc">Expert styling for all occasions — from sleek blowouts to elaborate bridal updos and modern cuts.</p>
+      <ul class="service-benefits">
+        <li>Bridal & event updos</li>
+        <li>Blowout & smoothening</li>
+        <li>Trendy cuts & layers</li>
+        <li>Professional blow-dry</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">✂️</span>
+      <div class="service-name">Hair Treatments</div>
+      <p class="service-desc">Restore your hair's natural health with our spa treatments, keratin therapy, and deep conditioning.</p>
+      <ul class="service-benefits">
+        <li>Keratin & smoothening</li>
+        <li>Deep conditioning spa</li>
+        <li>Hair colouring & balayage</li>
+        <li>Damage repair therapy</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">💆‍♀️</span>
+      <div class="service-name">Skin Care</div>
+      <p class="service-desc">Advanced skin care solutions for bright, clear, and youthful skin using premium dermal products.</p>
+      <ul class="service-benefits">
+        <li>Acne & pigmentation care</li>
+        <li>Vitamin C brightening</li>
+        <li>Hydration therapy</li>
+        <li>Peels & clean-ups</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in">
+      <span class="service-emoji">🌿</span>
+      <div class="service-name">Threading & Waxing</div>
+      <p class="service-desc">Precise, hygienic hair removal with minimal discomfort using the finest threads and premium wax.</p>
+      <ul class="service-benefits">
+        <li>Eyebrow shaping & design</li>
+        <li>Soft & hard wax options</li>
+        <li>Full body waxing</li>
+        <li>Sensitive skin friendly</li>
+      </ul>
+      <a href="#contact" class="service-book-btn">Book Now →</a>
+    </div>
+
+    <div class="service-card fade-in" style="background:linear-gradient(135deg,var(--blush-light),var(--cream));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <div style="font-family:'Great Vibes',cursive;font-size:2.5rem;color:var(--gold);margin-bottom:1rem;">And More…</div>
+      <p style="font-size:.88rem;color:var(--gray);font-weight:300;margin-bottom:1.5rem;">Mehndi, Nail Art, Eyelash Extensions, Pre-Bridal Packages & more await you.</p>
+      <a href="https://wa.me/919978651521" class="btn-primary" style="font-size:.72rem;">Enquire on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACADEMY -->
+<section id="academy">
+  <div class="academy-intro">
+    <div class="fade-in">
+      <div class="section-label">Noor Beauty Academy</div>
+      <h2 class="section-title">Build Your Career<br>in Beauty</h2>
+      <p class="section-sub">Professional, hands-on certification courses that turn passion into a rewarding career. Join hundreds of successful graduates.</p>
+    </div>
+    <a href="#contact" class="enroll-btn fade-in">Enroll Now →</a>
+  </div>
+
+  <div class="academy-grid">
+
+    <div class="course-card fade-in">
+      <div class="course-badge">Most Popular</div>
+      <div class="course-name">Professional Makeup Artist Course</div>
+      <p class="course-desc">Master the complete art of makeup — from basic everyday looks to editorial and bridal artistry using international techniques.</p>
+      <div class="course-details">
+        <div class="course-detail"><span class="course-detail-label">Duration</span><span class="course-detail-val">3 Months</span></div>
+        <div class="course-detail"><span class="course-detail-label">Certificate</span><span class="course-detail-val">Govt. Recognised</span></div>
+        <div class="course-detail"><span class="course-detail-label">Training</span><span class="course-detail-val">Practical + Theory</span></div>
+        <div class="course-detail"><span class="course-detail-label">Batch Size</span><span class="course-detail-val">Small Batches</span></div>
+      </div>
+      <ul class="course-features">
+        <li>HD, Airbrush & Bridal Makeup</li>
+        <li>Contouring, Highlights & Colour Theory</li>
+        <li>Portfolio development support</li>
+        <li>Career placement assistance</li>
+      </ul>
+      <a href="#contact" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card fade-in">
+      <div class="course-badge">Complete Course</div>
+      <div class="course-name">Professional Beautician Course</div>
+      <p class="course-desc">An all-in-one course covering all core beauty skills — perfect for starting your own salon or joining a professional setup.</p>
+      <div class="course-details">
+        <div class="course-detail"><span class="course-detail-label">Duration</span><span class="course-detail-val">6 Months</span></div>
+        <div class="course-detail"><span class="course-detail-label">Certificate</span><span class="course-detail-val">Govt. Recognised</span></div>
+        <div class="course-detail"><span class="course-detail-label">Training</span><span class="course-detail-val">100% Practical</span></div>
+        <div class="course-detail"><span class="course-detail-label">Level</span><span class="course-detail-val">Beginner–Advanced</span></div>
+      </div>
+      <ul class="course-features">
+        <li>Makeup, Facials, Waxing & Threading</li>
+        <li>Skin Analysis & Treatment</li>
+        <li>Business & salon management basics</li>
+        <li>Live client practice sessions</li>
+      </ul>
+      <a href="#contact" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card fade-in">
+      <div class="course-badge">High Demand</div>
+      <div class="course-name">Hair Styling & Treatment Course</div>
+      <p class="course-desc">From classic cuts to modern colour techniques — learn professional hair artistry used in top salons across India.</p>
+      <div class="course-details">
+        <div class="course-detail"><span class="course-detail-label">Duration</span><span class="course-detail-val">2 Months</span></div>
+        <div class="course-detail"><span class="course-detail-label">Certificate</span><span class="course-detail-val">Certified</span></div>
+        <div class="course-detail"><span class="course-detail-label">Training</span><span class="course-detail-val">Practical Heavy</span></div>
+        <div class="course-detail"><span class="course-detail-label">Tools</span><span class="course-detail-val">Provided</span></div>
+      </div>
+      <ul class="course-features">
+        <li>Cutting, Layering & Texturing</li>
+        <li>Balayage, Ombre & Global Colour</li>
+        <li>Keratin & smoothening treatments</li>
+        <li>Bridal & event hair styling</li>
+      </ul>
+      <a href="#contact" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card fade-in">
+      <div class="course-badge">Specialised</div>
+      <div class="course-name">Skin Treatment Course</div>
+      <p class="course-desc">Deep-dive into dermal science and advanced skin care treatments used in professional clinics and beauty studios.</p>
+      <div class="course-details">
+        <div class="course-detail"><span class="course-detail-label">Duration</span><span class="course-detail-val">2 Months</span></div>
+        <div class="course-detail"><span class="course-detail-label">Certificate</span><span class="course-detail-val">Certified</span></div>
+        <div class="course-detail"><span class="course-detail-label">Focus</span><span class="course-detail-val">Practical Skincare</span></div>
+        <div class="course-detail"><span class="course-detail-label">Products</span><span class="course-detail-val">Premium Brands</span></div>
+      </div>
+      <ul class="course-features">
+        <li>Skin anatomy & analysis</li>
+        <li>Facials, peels & treatments</li>
+        <li>Anti-ageing & brightening therapies</li>
+        <li>Acne & pigmentation solutions</li>
+      </ul>
+      <a href="#contact" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card fade-in">
+      <div class="course-badge">Premium</div>
+      <div class="course-name">Bridal Makeup Master Course</div>
+      <p class="course-desc">The ultimate specialisation in bridal artistry — become the go-to makeup artist for brides in your region.</p>
+      <div class="course-details">
+        <div class="course-detail"><span class="course-detail-label">Duration</span><span class="course-detail-val">45 Days</span></div>
+        <div class="course-detail"><span class="course-detail-label">Certificate</span><span class="course-detail-val">Master Certified</span></div>
+        <div class="course-detail"><span class="course-detail-label">Practice</span><span class="course-detail-val">Real Models</span></div>
+        <div class="course-detail"><span class="course-detail-label">Kit</span><span class="course-detail-val">Starter Kit Incl.</span></div>
+      </div>
+      <ul class="course-features">
+        <li>Traditional, Indo-Western & South Asian looks</li>
+        <li>Airbrush & HD bridal makeup</li>
+        <li>Client consultation & trial sessions</li>
+        <li>Pricing & business setup guide</li>
+      </ul>
+      <a href="#contact" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card fade-in" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-color:rgba(201,162,39,.4);background:rgba(201,162,39,.04);">
+      <div style="font-size:3rem;margin-bottom:1rem;">🎓</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff;margin-bottom:.8rem;">Not Sure Which Course?</div>
+      <p style="font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem;font-weight:300;">Chat with us on WhatsApp. We'll guide you to the perfect course based on your goals and schedule.</p>
+      <a href="https://wa.me/919978651521" class="btn-whatsapp" style="text-decoration:none;">💬 Chat with Us</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-intro fade-in">
+    <div class="section-label">Our Portfolio</div>
+    <h2 class="section-title">Beauty Transformations</h2>
+    <p class="section-sub">A glimpse into the artistry, skill, and passion that defines every look we create.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item tall gallery-color-1">
+      <div class="gallery-icon">👰</div>
+      <div class="gallery-overlay"><div class="gallery-label">Bridal Transformation</div></div>
+    </div>
+    <div class="gallery-item gallery-color-2">
+      <div class="gallery-icon">💄</div>
+      <div class="gallery-overlay"><div class="gallery-label">Party Glam Look</div></div>
+    </div>
+    <div class="gallery-item gallery-color-3">
+      <div class="gallery-icon">✨</div>
+      <div class="gallery-overlay"><div class="gallery-label">Evening Makeup</div></div>
+    </div>
+    <div class="gallery-item wide gallery-color-4">
+      <div class="gallery-icon">🎓</div>
+      <div class="gallery-overlay"><div class="gallery-label">Academy Training Session</div></div>
+    </div>
+    <div class="gallery-item gallery-color-5">
+      <div class="gallery-icon">💇‍♀️</div>
+      <div class="gallery-overlay"><div class="gallery-label">Hair Styling</div></div>
+    </div>
+    <div class="gallery-item gallery-color-6">
+      <div class="gallery-icon">🌸</div>
+      <div class="gallery-overlay"><div class="gallery-label">Skin Glow Facial</div></div>
+    </div>
+    <div class="gallery-item gallery-color-7">
+      <div class="gallery-icon">🏆</div>
+      <div class="gallery-overlay"><div class="gallery-label">Student Graduation</div></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="https://www.instagram.com/noor_beauty_care__/" target="_blank" rel="noopener" class="btn-primary">View More on Instagram ↗</a>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-content fade-in-left">
+      <div class="section-label">Why Noor</div>
+      <h2 class="section-title">The Noor<br>Difference</h2>
+      <p class="section-sub">We combine artistry with professionalism to deliver an experience that is as memorable as the results.</p>
+      <div class="why-promise">
+        <div class="promise-item">
+          <div class="promise-check">✓</div>
+          <div class="promise-text">Premium international products — only the best on your skin</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-check">✓</div>
+          <div class="promise-text">Hygienic, sanitised tools and workspaces at all times</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-check">✓</div>
+          <div class="promise-text">100% satisfaction — we don't stop until you love it</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-check">✓</div>
+          <div class="promise-text">Flexible timing and home service available on request</div>
+        </div>
+      </div>
+    </div>
+    <div class="why-features fade-in-right">
+      <div class="why-feat">
+        <span class="why-feat-icon">👩‍🏫</span>
+        <div class="why-feat-title">Expert Trainers</div>
+        <p class="why-feat-text">Learn from certified beauty professionals with years of industry experience and a proven track record.</p>
+      </div>
+      <div class="why-feat">
+        <span class="why-feat-icon">📜</span>
+        <div class="why-feat-title">Certified Courses</div>
+        <p class="why-feat-text">Receive government-recognised certifications that open doors to salons, studios, and self-employment.</p>
+      </div>
+      <div class="why-feat">
+        <span class="why-feat-icon">💰</span>
+        <div class="why-feat-title">Affordable Pricing</div>
+        <p class="why-feat-text">Premium quality services and courses at accessible prices — because beauty education should be for everyone.</p>
+      </div>
+      <div class="why-feat">
+        <span class="why-feat-icon">🤝</span>
+        <div class="why-feat-title">Practical Training</div>
+        <p class="why-feat-text">80% hands-on practice on real models ensures you graduate ready to work confidently from day one.</p>
+      </div>
+      <div class="why-feat">
+        <span class="why-feat-icon">🌐</span>
+        <div class="why-feat-title">Modern Techniques</div>
+        <p class="why-feat-text">Stay ahead with the latest global beauty trends, products, and application techniques taught in every course.</p>
+      </div>
+      <div class="why-feat">
+        <span class="why-feat-icon">❤️</span>
+        <div class="why-feat-title">Personalised Care</div>
+        <p class="why-feat-text">Every client and student receives individual attention tailored to their unique needs, skin type, and goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-title-wrap fade-in">
+    <div class="section-label">What They Say</div>
+    <h2 class="section-title">Client Love &<br>Student Success</h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Noor di did my bridal makeup and I was stunned. Every single guest kept asking who did my makeup. The look lasted the entire day without touching up once!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">P</div>
+        <div>
+          <div class="author-name">Priya Sharma</div>
+          <div class="author-role">Bride, Dahod</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I enrolled in the Makeup Artist course with zero experience. Within 3 months I had the skills and confidence to start taking clients. The practical training made all the difference!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">R</div>
+        <div>
+          <div class="author-name">Rima Patel</div>
+          <div class="author-role">Academy Graduate, 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"The gold facial I got here was honestly the best skincare I've ever had. My skin glowed for weeks! This is the only salon I trust with my skin now."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">S</div>
+        <div>
+          <div class="author-name">Sneha Joshi</div>
+          <div class="author-role">Regular Client</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I did the Beautician course and now I run my own parlour! The business guidance from the academy helped me launch confidently. Forever grateful to this place."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">F</div>
+        <div>
+          <div class="author-name">Fatema Khan</div>
+          <div class="author-role">Salon Owner, Graduate 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"My hair was severely damaged and after just two sessions of the spa treatment, it felt silky and healthy again. The hair team here truly knows what they're doing."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">N</div>
+        <div>
+          <div class="author-name">Nisha Agarwal</div>
+          <div class="author-role">Hair Treatment Client</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I was nervous about my sangeet makeup but the artist was so patient and understood exactly what I wanted. The pictures came out absolutely beautiful!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">D</div>
+        <div>
+          <div class="author-name">Divya Mehta</div>
+          <div class="author-role">Sangeet Makeup Client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <span class="cta-script">Ready to Glow?</span>
+  <h2>Your Beauty Journey<br>Starts Today</h2>
+  <p>Whether you're booking a service or starting a course — we're here to help you shine.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="btn-white">Book an Appointment</a>
+    <a href="https://wa.me/919978651521?text=Hello%20Noor%20Beauty%20Care!%20I%20would%20like%20to%20enquire%20about%20your%20services." class="btn-whatsapp" target="_blank" rel="noopener">
+      <span>💬</span> Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="fade-in-left">
+      <div class="section-label">Find Us</div>
+      <h3 class="section-title" style="font-size:2.5rem;">Get In Touch</h3>
+      <p class="section-sub" style="margin-bottom:2rem;">We'd love to hear from you. Book an appointment, enrol in a course, or simply say hello.</p>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-val">Dahod, Gujarat, India</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone / WhatsApp</div>
+            <a href="tel:+919978651521" class="contact-item-val">+91 99786 51521</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📸</div>
+          <div>
+            <div class="contact-item-label">Instagram</div>
+            <a href="https://www.instagram.com/noor_beauty_care__/" target="_blank" rel="noopener" class="contact-item-val">@noor_beauty_care__</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-val">Mon–Sat: 9:00 AM – 8:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/noor_beauty_care__/" target="_blank" rel="noopener" class="social-link" title="Instagram">📸</a>
+        <a href="https://wa.me/919978651521" target="_blank" rel="noopener" class="social-link" title="WhatsApp">💬</a>
+        <a href="tel:+919978651521" class="social-link" title="Call">📞</a>
+      </div>
+
+      <a href="https://maps.google.com/?q=Dahod+Gujarat+India" target="_blank" rel="noopener" class="map-embed" style="display:flex;text-decoration:none;margin-top:2rem;">
+        <div class="map-link">🗺️ &nbsp; View on Google Maps → Dahod, Gujarat</div>
+      </a>
+    </div>
+
+    <div class="contact-form fade-in-right">
+      <h3>Book an Appointment</h3>
+      <p class="form-subtitle">Fill in your details and we'll get back to you within 24 hours.</p>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91 99786 51521" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service / Course *</label>
+          <select required>
+            <option value="">Select a service or course</option>
+            <optgroup label="Beauty Services">
+              <option>Bridal Makeup</option>
+              <option>Party Makeup</option>
+              <option>Facial Treatment</option>
+              <option>Hair Styling</option>
+              <option>Hair Treatment</option>
+              <option>Skin Care</option>
+              <option>Threading & Waxing</option>
+              <option>Other Service</option>
+            </optgroup>
+            <optgroup label="Academy Courses">
+              <option>Professional Makeup Artist Course</option>
+              <option>Beautician Course</option>
+              <option>Hair Styling Course</option>
+              <option>Skin Treatment Course</option>
+              <option>Bridal Makeup Master Course</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date">
+          </div>
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <input type="time">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Any special requests or questions?"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <span>Noor Beauty</span>
+        <span style="color:var(--gold-light);">Care & Academy</span>
+      </div>
+      <p>Dahod's trusted beauty destination — premium salon services and certified beauty training for every dream and every goal.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/noor_beauty_care__/" target="_blank" rel="noopener">📸</a>
+        <a href="https://wa.me/919978651521" target="_blank" rel="noopener">💬</a>
+        <a href="tel:+919978651521">📞</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Bridal Makeup</a></li>
+        <li><a href="#services">Party Makeup</a></li>
+        <li><a href="#services">Facial Treatments</a></li>
+        <li><a href="#services">Hair Styling</a></li>
+        <li><a href="#services">Skin Care</a></li>
+        <li><a href="#services">Threading & Waxing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Academy Courses</h4>
+      <ul class="footer-links">
+        <li><a href="#academy">Makeup Artist Course</a></li>
+        <li><a href="#academy">Beautician Course</a></li>
+        <li><a href="#academy">Hair Styling Course</a></li>
+        <li><a href="#academy">Skin Treatment Course</a></li>
+        <li><a href="#academy">Bridal Makeup Course</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Noor Beauty Care & Academy, Dahod, Gujarat. All rights reserved.</span>
+    <span>Made with ❤️ for beauty | <a href="https://www.instagram.com/noor_beauty_care__/" target="_blank" rel="noopener">@noor_beauty_care__</a></span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919978651521?text=Hello%20Noor%20Beauty!%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp">💬</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.querySelectorAll('span').forEach((s, i) => {
+      if (mobileMenu.classList.contains('open')) {
+        if (i === 0) s.style.transform = 'rotate(45deg) translate(5px,5px)';
+        if (i === 1) s.style.opacity = '0';
+        if (i === 2) s.style.transform = 'rotate(-45deg) translate(5px,-5px)';
+      } else {
+        s.style.transform = '';
+        s.style.opacity = '';
+      }
+    });
+  });
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    hamburger.querySelectorAll('span').forEach(s => { s.style.transform=''; s.style.opacity=''; });
+  }
+
+  // Intersection observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Enquiry Sent!';
+    btn.style.background = '#2ecc71';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry →';
+      btn.style.background = '';
+      e.target.reset();
+    }, 3000);
+  }
+
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--gold)' : '';
+    });
+  });
+</script>
+</body>
+</html>
